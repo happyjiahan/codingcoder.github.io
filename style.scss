@@ -18,16 +18,22 @@ html {
 }
 
 body {
-	background: $white;
+  background: $lightGray;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
 
+.wrapper-masthead {
+  background: black;
+}
+
+
 .container {
-  margin: 0 auto;
+  margin: auto;
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
