@@ -18,23 +18,23 @@ html {
 }
 
 body {
-  background: $lightGray;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
-}
-
-.wrapper-masthead {
-  background: black;
-}
-
-
-.container {
   margin: auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-  background: white;
+  background: $white;
+  font: 18px/1.4 $helvetica;
 }
+
+.wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  background: $white;
+}
+
+.wrapper-header {
+
+}
+
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
