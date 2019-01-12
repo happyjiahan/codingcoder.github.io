@@ -3,16 +3,18 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
+    {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <span class="category"></span>
+        <span class="date">{{post.date | date:"%Y-%m-%d"}}</span>
+        <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 
-      <!--<div class="entry">-->
+        <!--<div class="entry">-->
         <!--{{ post.excerpt }}-->
-      <!--</div>-->
+        <!--</div>-->
 
-      <!--<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>-->
+        <!--<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>-->
     </article>
-  {% endfor %}
+    {% endfor %}
 </div>
