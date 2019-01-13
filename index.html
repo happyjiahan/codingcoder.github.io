@@ -5,10 +5,11 @@ layout: default
 <div class="posts">
     {% for post in site.posts %}
     <article class="post">
-
-        <span class="category"></span>
+        <div class="category-container">
+            <span class="category">Tech</span>
+        </div>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="title">{{ post.title }}</a>
         <span class="date">{{post.date | date:"%Y-%m-%d"}}</span>
-        <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 
         <!--<div class="entry">-->
         <!--{{ post.excerpt }}-->

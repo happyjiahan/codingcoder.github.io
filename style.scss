@@ -9,90 +9,135 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+$font-family: "Source Code Pro", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$post-height: 50px;
+
 html {
-  font-size: 100%;
+  height: 100%;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
 }
 
+
 body {
-  margin: auto;
-  background: $white;
-  font: 18px/1.4 $helvetica;
+  background: $lightGray;
+  height: inherit;
+  padding: 10px 0px;
 }
 
 .wrapper {
-  background: $white;
+  background: inherit;
   width: 100%;
   max-width: 800px;
+  height: inherit;
   margin: auto;
   text-align: center;
-  vertical-align: center;
+
 }
 
 .wrapper-header {
-  height: 50px;
+  height: $post-height;
+  line-height: $post-height;
   text-align: left;
+  background: $white;
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
-
-.post {
-  display: flex;
-
-  .category {
-    font-size: 18px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
-  .date {
-    margin: auto;
-    font-size: 10px;
-    text-align: center;
-    float: right;
-  }
-}
-
-
 
 .wrapper-posts {
   text-align: left;
+  background: $white;
+  padding: 0 10px;
+  min-height: calc(100% - 120px);
 }
 
-.posts > .post {
-  height: 2em;
-  border-bottom: 1px solid $lightGray;
+.wrapper-footer {
+  text-align: center;
+  margin: auto;
+  font-size: 10px;
+  height: $post-height;
+  line-height: $post-height;
+  color: $gray;
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+.page-post {
+  padding: 10px;
 }
 
 .post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
+  height: $post-height;
+  border-bottom: 1px solid $lightGray;
+}
 
-  .comments {
-    margin-top: 10px;
-  }
+.category-container {
+  width: 50px;
+  display: inline-block;
+}
 
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
+.category {
+  font-size: 1.5vh;
+  height: $post-height;
+  line-height: $post-height;
+  padding: 5px 5px;
+  border-radius: 4px;
+  background: #f4f4f4;
+}
+
+.title {
+  padding-left: 5px;
+  font-size: 18px;
+  height: $post-height;
+  line-height: $post-height;
+}
+
+.date {
+  font-size: 12px;
+  float: right;
+  height: $post-height;
+  line-height: $post-height;
 }
 
 
+.page-date {
+  text-align: right;
+  font-size: 12px;
+  height: $post-height;
+  line-height: $post-height;
+  font-style: italic;
+  color: $gray;
+}
+
+.page-post-title {
+  font-size: 24px;
+  height: $post-height + 10px;
+  line-height: $post-height +10px;
+  text-align: center;
+}
+
+.page-post-title-border {
+  background: $lightGray;
+  height: 1px;
+  width: 80%;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.page-entry {
+  padding-top: 10px;
+}
+
+.posts > .post:last-child {
+  border-bottom: none;
+}
 
 
 .wrapper-footer {
-  height: 50px;
+  height: $post-height;
+  background: $white;
+  margin-top: 10px;
 }
 
 
@@ -112,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 24px;
+
   a {
     color: inherit;
   }
@@ -138,6 +184,7 @@ a {
   color: $darkerGray;
   text-decoration: none;
   cursor: pointer;
+
   &:hover, &:active {
     color: $blue;
   }
@@ -191,6 +238,7 @@ img {
   color: $black;
   background: $lightGray;
 }
+
 ::selection {
   color: $black;
   background: $lightGray;
