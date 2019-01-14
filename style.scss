@@ -30,7 +30,7 @@ body {
 .wrapper {
   background: inherit;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   height: inherit;
   margin: auto;
   text-align: center;
@@ -72,12 +72,11 @@ body {
 }
 
 .category-container {
-  width: 50px;
   display: inline-block;
 }
 
 .category {
-  font-size: 1.5vh;
+  font-size: 1.0vh;
   height: $post-height;
   line-height: $post-height;
   padding: 5px 5px;
