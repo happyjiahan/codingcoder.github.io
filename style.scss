@@ -49,7 +49,14 @@ body {
 .wrapper-posts {
   text-align: left;
   background: $white;
-  padding: 0 10px;
+  padding: 0 15px 0 10px;
+  min-height: calc(100% - 120px);
+}
+
+.page-wrapper-posts {
+  text-align: left;
+  background: $white;
+  padding: 0 0px 0 0px;
   min-height: calc(100% - 120px);
 }
 
@@ -63,7 +70,7 @@ body {
 }
 
 .page-post {
-  padding: 10px;
+  padding: 15px;
 }
 
 .post {
@@ -76,7 +83,7 @@ body {
 }
 
 .category {
-  font-size: 1.0vh;
+  font-size: 16px;
   height: $post-height;
   line-height: $post-height;
   padding: 5px 5px;
@@ -104,7 +111,6 @@ body {
   font-size: 12px;
   height: $post-height;
   line-height: $post-height;
-  font-style: italic;
   color: $gray;
 }
 
@@ -126,10 +132,6 @@ body {
 
 .page-entry {
   padding-top: 10px;
-}
-
-.posts > .post:last-child {
-  border-bottom: none;
 }
 
 

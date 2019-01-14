@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} </title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}"
+          href="{{ site.baseurl }}/feed.xml"/>
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="wrapper-header">
+        <div class="category-container">
+            <span class="category">主页</span>
+        </div>
+        <a href="{{ site.baseurl }}/" class="title">{{ site.name }}</a></a>
+    </header>
+
+    <div class="page-wrapper-posts">
+        {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+                Stay Hungry. Stay Foolish.
+    </div>
+</div>
+
+{% include analytics.html %}
+</body>
+</html>
