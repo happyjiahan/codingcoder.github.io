@@ -58,6 +58,7 @@ body {
   background: $white;
   padding: 0 0px 0 0px;
   min-height: calc(100% - 120px);
+  line-height: 2;
 }
 
 .wrapper-footer {
@@ -71,6 +72,7 @@ body {
 
 .page-post {
   padding: 15px;
+
 }
 
 .post {
@@ -103,6 +105,10 @@ body {
   float: right;
   height: $post-height;
   line-height: $post-height;
+}
+
+p {
+  text-indent:2em;
 }
 
 
