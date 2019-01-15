@@ -10,10 +10,9 @@ date: 2019-1-14 23:10
 在游戏中我们使用了 BestHTTP 这个第三方的类库来发送 HTTP 请求，并且，业务逻辑上首先发送一个 http://api.host1.com/gets 这样一个接口，
 该接口会返回另外一个 URL Host 比如：http://api.host2.com/，然后，后续所有的 API 的 host 都基于该新返回的 host2, 再拼接上其余的 URL Path。
 
-在 BestHTTP 内部，有一个函数 GetRequestPathAndQueryURL 是负责解析 URL 的，如下：
+在 BestHTTP 内部，有一个函数 `GetRequestPathAndQueryURL` 是负责解析 URL 的，如下：
 
 ```C#
-
 public static string GetRequestPathAndQueryURL(this Uri uri)
 {
     string requestPathAndQuery = uri.GetComponents(UriComponents.PathAndQuery, UriFormat.UriEscaped);
@@ -26,7 +25,7 @@ public static string GetRequestPathAndQueryURL(this Uri uri)
 }
 ```
 
-直接调用 GetRequestPathAndQueryURL 的函数的内部处理如下：
+直接调用 `GetRequestPathAndQueryURL` 的函数的内部处理如下：
 
 ```C#
 internal void SendOutTo(Stream stream)
@@ -45,7 +44,7 @@ internal void SendOutTo(Stream stream)
 
 ```
 
-SendOutTo 的上层调用者，如下：
+`SendOutTo` 的上层调用者，如下：
 ```C#
 
 try
@@ -92,9 +91,9 @@ catch (Exception ex)
 
 
 ## 第三方如何进行错误处理
-从这个例子我们可以看到，之所以出现如此难查的问题，根本原因是因为 BestHTTP 在对异常的处理上有问题，它不应该把异常"狸猫换太子"，而是应该把最直接的异常信息打印出来。
-在错误处理时，应该秉持"快速失败"原则，哪个地方有问题，就在哪个地方失败，这样方便开发者快速定位错误代码。特别是第三方库，由于其封装问题，很有可能不会以源代码的形式提供，
-而是以 DLL 等函数库的方式提供，对于调试更加不便，更应该"快速失败"，并打印出足够多的 Log 信息。
+从这个例子我们可以看到，之所以出现如此难查的问题，根本原因是因为 BestHTTP 在对异常的处理上有问题，它不应该把异常 "狸猫换太子"，而是应该把最直接的异常信息打印出来。
+在错误处理时，应该秉持 "快速失败" 原则，哪个地方有问题，就在哪个地方失败，这样方便开发者快速定位错误代码。特别是第三方库，由于其封装问题，很有可能不会以源代码的形式提供，
+而是以 DLL 等函数库的方式提供，对于调试更加不便，更应该 "快速失败"，并打印出足够多的 Log 信息。
 
 
 
