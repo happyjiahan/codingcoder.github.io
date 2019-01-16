@@ -9,7 +9,7 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
-$font-family: "Source Code Pro", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 $post-height: 50px;
 
 html {
@@ -25,6 +25,7 @@ body {
   background: $lightGray;
   height: inherit;
   padding: 10px 0px;
+  color: $darkerGray;
 }
 
 .wrapper {
@@ -44,6 +45,7 @@ body {
   background: $white;
   margin-bottom: 10px;
   padding: 0 10px;
+  color: inherit;
 }
 
 .wrapper-posts {
@@ -51,6 +53,7 @@ body {
   background: $white;
   padding: 0 15px 0 10px;
   min-height: calc(100% - 120px);
+  color: inherit;
 }
 
 .page-wrapper-posts {
@@ -59,6 +62,7 @@ body {
   padding: 0 0px 0 0px;
   min-height: calc(100% - 120px);
   line-height: 2;
+  color: inherit;
 }
 
 .wrapper-footer {
@@ -98,6 +102,9 @@ body {
   font-size: 18px;
   height: $post-height;
   line-height: $post-height;
+  margin-top: 0;
+  letter-spacing: 0.05em;
+  font-weight: normal;
 }
 
 .date {
@@ -125,6 +132,8 @@ p {
   height: $post-height + 10px;
   line-height: $post-height +10px;
   text-align: center;
+  letter-spacing: 0.05em;
+  font-weight: normal;
 }
 
 .page-post-title-border {
@@ -149,12 +158,11 @@ p {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
   color: $darkerGray;
-  font-weight: normal;
+  font-weight: lighter;
 
   line-height: 1.0;
-  margin: 1em 0 5px;
+  margin: 2em 0 5px;
   padding: 0;
 
   @include mobile {
@@ -164,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 24px;
+  font-weight: normal;
 
   a {
     color: inherit;
@@ -172,6 +181,7 @@ h1 {
 
 h2 {
   font-size: 22px;
+  font-weight: normal;
 }
 
 h3 {
@@ -185,6 +195,7 @@ h4 {
 
 p {
   margin: 15px 0;
+  color: $gray;
 }
 
 a {
@@ -262,3 +273,7 @@ img {
 .clearfix:after {
   clear: both;
 }
+
+@import "highlights";
+@import "svg-icons";
+
