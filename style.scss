@@ -104,7 +104,7 @@ body {
   line-height: $post-height;
   margin-top: 0;
   letter-spacing: 0.05em;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .date {
@@ -133,7 +133,7 @@ p {
   line-height: $post-height +10px;
   text-align: center;
   letter-spacing: 0.05em;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .page-post-title-border {
@@ -172,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 24px;
+  font-weight: normal;
 
   a {
     color: inherit;
@@ -180,6 +181,7 @@ h1 {
 
 h2 {
   font-size: 22px;
+  font-weight: normal;
 }
 
 h3 {
@@ -193,6 +195,7 @@ h4 {
 
 p {
   margin: 15px 0;
+  color: $gray;
 }
 
 a {

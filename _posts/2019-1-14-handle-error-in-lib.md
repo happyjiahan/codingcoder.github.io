@@ -76,7 +76,8 @@ catch (Exception ex)
 
 ```
 
-由于服务器开发人员不小心在返回的 URL 字符串的开始处多加了一个空格，既" http://api.host2.com"，导致 `GetRequestPathAndQueryURL()` 函数在解析时会抛出异常。
+由于服务器开发人员不小心在返回的 URL 字符串的开始处多加了一个空格，  
+既 " http://api.host2.com"，导致 `GetRequestPathAndQueryURL()` 函数在解析时会抛出异常。
 但遗憾的是 BestHTTP 并没有正确的处理这个异常，既在 `SendOutTo()` 函数中，只有 `try{} finally {}`, 并没有 `catch（）`。
 这样，GetRequestPathAndQueryURL 所抛出的异常会被更上一层的函数捕获处理。而更上层的函数则只是把网络连接关闭，
 并抛出了另外一个与 URL 解析异常毫不相干的异常：`throw new Exception("AbortRequested")` 。
