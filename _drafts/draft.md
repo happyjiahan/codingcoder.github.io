@@ -3,8 +3,15 @@ layout: post
 title: You're up and running!
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+https://blogs.unity3d.com/cn/2018/06/27/new-best-practice-guide-memory-management-in-unity/?_ga=2.182819046.1356382283.1547431338-2085577996.1536029549
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+https://medium.com/@SoCohesive/unity-how-to-build-a-bridge-ios-to-unity-with-swift-f23653f6261
+
+ 游戏中的多时区问题 https://www.litefeel.com/time-zone-in-the-game/
+
+UniRX 响应式编程
+
+AssetBundle 脚本改变 Namespace 需要重新打包
+
+
